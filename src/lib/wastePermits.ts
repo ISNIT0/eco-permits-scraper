@@ -3,7 +3,7 @@ import { Entry } from 'src/models/Entry.model';
 import { EntryType } from '.';
 
 export async function populateWastePermits() {
-    const { data: { items } } = await axios.get(`https://environment.data.gov.uk/public-register/waste-operations/registration.json?_limit=20`);
+    const { data: { items } } = await axios.get(`https://environment.data.gov.uk/public-register/waste-operations/registration.json?_limit=999999999`);
 
     await Promise.all(
         items.map(async (item: any) => {
