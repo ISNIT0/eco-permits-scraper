@@ -1,12 +1,20 @@
 import { Router, Request, Response } from "express";
 import expressAsyncHandler = require("express-async-handler");
+import { populateWasteExemptions } from "src/lib/wasteExemptions";
+import { populateWaterQualityExemptions } from "src/lib/waterQualityExemptions";
+import { populateWastePermits } from "src/lib/wastePermits";
 
 const router = Router();
 
-router.post(
-    '/public',
+router.get(
+    '/triggerScrape',
     expressAsyncHandler(async function (req: Request, res: Response) {
-        res.send('Public');
+        await Promise.all([
+            populateWasteExemptions(),
+            populateWaterQualityExemptions(),
+            populateWastePermits(),
+        ]);
+        res.send({ ok: true });
     })
 );
 
