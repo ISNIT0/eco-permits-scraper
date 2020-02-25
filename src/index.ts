@@ -31,6 +31,7 @@ app.use(
         allowedHeaders: ['Content-Type', 'Authorization', 'Content-Length', 'X-Requested-With'],
         origin: [
             'http://localhost:3000',
+            'http://localhost:8080',
         ],
         credentials: true,
     })

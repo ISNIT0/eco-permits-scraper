@@ -18,8 +18,10 @@ export class Entry extends BaseEntity {
     @Column({
         type: 'geometry',
         spatialFeatureType: 'Point',
-        srid: 4326
+        srid: 4326,
+        nullable: true,
     }) point: Point;
+    @Column({ nullable: true }) siteAddress: string;
 
     @Column() type: string; // EntryType
     @Column() originalRecord: string;
@@ -27,5 +29,5 @@ export class Entry extends BaseEntity {
     @Column({ nullable: true }) summary?: string;
     @Column({ nullable: true }) description?: string;
     @Column({ nullable: true }) imageUrl?: string;
-
+    @Column({ nullable: true }) startDate?: string;
 }
