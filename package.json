@@ -42,7 +42,7 @@
     "@types/proj4": "^2.5.0",
     "@types/redis": "^2.8.14",
     "@types/tape": "^4.2.34",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "blue-tape": "^1.0.0",
     "body-parser": "^1.19.0",
     "child-process-promise": "^2.2.1",
