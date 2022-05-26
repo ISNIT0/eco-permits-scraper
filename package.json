@@ -48,7 +48,7 @@
     "child-process-promise": "^2.2.1",
     "class-validator": "^0.11.0",
     "connect-redis": "^4.0.3",
-    "convict": "^5.2.0",
+    "convict": "^6.2.3",
     "copy-webpack-plugin": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
